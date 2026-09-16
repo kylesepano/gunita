@@ -1,0 +1,12 @@
+﻿SELECT DISTINCT ?event ?eventLabel ?date ?coord ?countryLabel ?person ?personLabel ?birth ?image WHERE {
+  VALUES ?class { wd:Q645883 wd:Q188055 wd:Q10931 wd:Q131569 wd:Q273120 wd:Q3024240 wd:Q2001676 wd:Q1445650 }
+  ?event wdt:P31 ?class; wdt:P625 ?coord.
+  { ?event wdt:P585 ?date } UNION { ?event wdt:P580 ?date }
+  { ?event wdt:P710 ?person } UNION { ?event wdt:P1120 ?person } UNION { ?event wdt:P664 ?person }
+  ?person wdt:P569 ?birth.
+  OPTIONAL { ?event wdt:P17 ?country }
+  OPTIONAL { ?person wdt:P18 ?image }
+  FILTER(YEAR(?date) >= 1000 && YEAR(?date) <= 2020)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 4000

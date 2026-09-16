@@ -1,0 +1,178 @@
+﻿[
+    {
+        "event":  {
+                      "type":  "uri",
+                      "value":  "http://www.wikidata.org/entity/Q700937"
+                  },
+        "date":  {
+                     "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                     "type":  "literal",
+                     "value":  "1941-10-18T00:00:00Z"
+                 },
+        "person":  {
+                       "type":  "uri",
+                       "value":  "http://www.wikidata.org/entity/Q57135"
+                   },
+        "birth":  {
+                      "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "type":  "literal",
+                      "value":  "1887-11-24T00:00:00Z"
+                  },
+        "coord":  {
+                      "datatype":  "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type":  "literal",
+                      "value":  "Point(34.1 44.9333)"
+                  },
+        "image":  {
+                      "type":  "uri",
+                      "value":  "http://commons.wikimedia.org/wiki/Special:FilePath/Bundesarchiv%20Bild%20183-H01758%2C%20Erich%20v.%20Manstein.jpg"
+                  },
+        "eventLabel":  {
+                           "xml:lang":  "en",
+                           "type":  "literal",
+                           "value":  "Crimean Campaign"
+                       },
+        "countryLabel":  {
+                             "xml:lang":  "en",
+                             "type":  "literal",
+                             "value":  "Romania"
+                         },
+        "personLabel":  {
+                            "xml:lang":  "en",
+                            "type":  "literal",
+                            "value":  "Erich von Manstein"
+                        }
+    },
+    {
+        "event":  {
+                      "type":  "uri",
+                      "value":  "http://www.wikidata.org/entity/Q529723"
+                  },
+        "date":  {
+                     "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                     "type":  "literal",
+                     "value":  "1986-01-01T00:00:00Z"
+                 },
+        "person":  {
+                       "type":  "uri",
+                       "value":  "http://www.wikidata.org/entity/Q462061"
+                   },
+        "birth":  {
+                      "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "type":  "literal",
+                      "value":  "1942-07-01T00:00:00Z"
+                  },
+        "coord":  {
+                      "datatype":  "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type":  "literal",
+                      "value":  "Point(43.0 33.0)"
+                  },
+        "image":  {
+                      "type":  "uri",
+                      "value":  "http://commons.wikimedia.org/wiki/Special:FilePath/Izzat%20Ibrahim%20al-Douri%20portrait%20%28cropped%29.png"
+                  },
+        "eventLabel":  {
+                           "xml:lang":  "en",
+                           "type":  "literal",
+                           "value":  "Anfal campaign"
+                       },
+        "countryLabel":  {
+                             "xml:lang":  "en",
+                             "type":  "literal",
+                             "value":  "Iraq"
+                         },
+        "personLabel":  {
+                            "xml:lang":  "en",
+                            "type":  "literal",
+                            "value":  "Izzat Ibrahim al-Douri"
+                        }
+    },
+    {
+        "event":  {
+                      "type":  "uri",
+                      "value":  "http://www.wikidata.org/entity/Q700937"
+                  },
+        "date":  {
+                     "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                     "type":  "literal",
+                     "value":  "1941-10-18T00:00:00Z"
+                 },
+        "person":  {
+                       "type":  "uri",
+                       "value":  "http://www.wikidata.org/entity/Q81047"
+                   },
+        "birth":  {
+                      "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "type":  "literal",
+                      "value":  "1898-09-29T00:00:00Z"
+                  },
+        "coord":  {
+                      "datatype":  "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type":  "literal",
+                      "value":  "Point(34.1 44.9333)"
+                  },
+        "image":  {
+                      "type":  "uri",
+                      "value":  "http://commons.wikimedia.org/wiki/Special:FilePath/Fi%C3%B3dor%20Kuznetsov.jpg"
+                  },
+        "eventLabel":  {
+                           "xml:lang":  "en",
+                           "type":  "literal",
+                           "value":  "Crimean Campaign"
+                       },
+        "countryLabel":  {
+                             "xml:lang":  "en",
+                             "type":  "literal",
+                             "value":  "Romania"
+                         },
+        "personLabel":  {
+                            "xml:lang":  "en",
+                            "type":  "literal",
+                            "value":  "Fyodor Kuznetsov"
+                        }
+    },
+    {
+        "event":  {
+                      "type":  "uri",
+                      "value":  "http://www.wikidata.org/entity/Q529723"
+                  },
+        "date":  {
+                     "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                     "type":  "literal",
+                     "value":  "1986-01-01T00:00:00Z"
+                 },
+        "person":  {
+                       "type":  "uri",
+                       "value":  "http://www.wikidata.org/entity/Q2508477"
+                   },
+        "birth":  {
+                      "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                      "type":  "literal",
+                      "value":  "1945-01-01T00:00:00Z"
+                  },
+        "coord":  {
+                      "datatype":  "http://www.opengis.net/ont/geosparql#wktLiteral",
+                      "type":  "literal",
+                      "value":  "Point(43.0 33.0)"
+                  },
+        "image":  {
+                      "type":  "uri",
+                      "value":  "http://commons.wikimedia.org/wiki/Special:FilePath/Saddam%20Hussein%27s%20former%20Defense%20Minister%2C%20Sultan%20Hashim%20Ahmad%2C%20in%20Baghdad%2C%20Iraq.jpg"
+                  },
+        "eventLabel":  {
+                           "xml:lang":  "en",
+                           "type":  "literal",
+                           "value":  "Anfal campaign"
+                       },
+        "countryLabel":  {
+                             "xml:lang":  "en",
+                             "type":  "literal",
+                             "value":  "Iraq"
+                         },
+        "personLabel":  {
+                            "xml:lang":  "en",
+                            "type":  "literal",
+                            "value":  "Sultan Hashim Ahmad al-Tai"
+                        }
+    }
+]

@@ -1,4 +1,5 @@
 import type { HistoricalEvent } from '../types/history'
+import { wikimediaPortraits } from './wikimediaPortraits'
 
 // Generated from a Wikidata event query on 2026-09-16. Each item keeps its Wikidata source URL.
 // Review entries before editorial publication; this bank supplies broad quiz coverage.
@@ -4310,7 +4311,7 @@ export const wikidataSupplement: HistoricalEvent[] = imported.map((event) => ({
     id: `${event.id}-person`,
     name: event.person,
     bio: 'A historical figure associated with this event',
-    image: '/portraits/historical-figure.svg',
+    image: wikimediaPortraits[event.qid] ?? '/portraits/historical-figure.svg',
     birthYear: event.birthYear,
   },
   role: 'Which historical figure was associated with this event?',

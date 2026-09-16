@@ -1,0 +1,39 @@
+﻿{
+    "event":  {
+                  "type":  "uri",
+                  "value":  "http://www.wikidata.org/entity/Q3571687"
+              },
+    "date":  {
+                 "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                 "type":  "literal",
+                 "value":  "1811-02-28T00:00:00Z"
+             },
+    "person":  {
+                   "type":  "uri",
+                   "value":  "http://www.wikidata.org/entity/Q5658905"
+               },
+    "birth":  {
+                  "datatype":  "http://www.w3.org/2001/XMLSchema#dateTime",
+                  "type":  "literal",
+                  "value":  "1779-01-01T00:00:00Z"
+              },
+    "coord":  {
+                  "datatype":  "http://www.opengis.net/ont/geosparql#wktLiteral",
+                  "type":  "literal",
+                  "value":  "Point(-57.7528 -33.5228)"
+              },
+    "image":  {
+                  "type":  "uri",
+                  "value":  "http://commons.wikimedia.org/wiki/Special:FilePath/BbPEDRO%20JOS%C3%89%20VIERA.jpg"
+              },
+    "eventLabel":  {
+                       "xml:lang":  "en",
+                       "type":  "literal",
+                       "value":  "Cry of Asencio"
+                   },
+    "personLabel":  {
+                        "xml:lang":  "en",
+                        "type":  "literal",
+                        "value":  "Pedro José Viera"
+                    }
+}

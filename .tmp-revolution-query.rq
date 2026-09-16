@@ -1,0 +1,10 @@
+﻿SELECT DISTINCT ?event ?eventLabel ?date ?coord ?countryLabel ?person ?personLabel ?birth ?image WHERE {
+  ?event wdt:P31/wdt:P279* wd:Q10931; wdt:P625 ?coord; wdt:P710 ?person.
+  { ?event wdt:P585 ?date } UNION { ?event wdt:P580 ?date }
+  ?person wdt:P569 ?birth.
+  OPTIONAL { ?event wdt:P17 ?country }
+  OPTIONAL { ?person wdt:P18 ?image }
+  FILTER(YEAR(?date) >= 1000 && YEAR(?date) <= 2020)
+  SERVICE wikibase:label { bd:serviceParam wikibase:language "en". }
+}
+LIMIT 1000
