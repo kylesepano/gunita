@@ -47,7 +47,7 @@ Never put a service-role secret in the browser. Saving is transactional and idem
 
 ### Admin login
 
-Open `/admin` or click **Admin** in the footer. Create a normal Supabase account, then grant it membership in `public.admin_users` using the exact instructions in [docs/ADMIN.md](docs/ADMIN.md). There is no hardcoded admin password and ordinary sign-up does not grant editing rights. The editor includes all six answer types, portrait URLs, source references, drafts and publication status. Removal preserves existing game records.
+Open `/admin` directly. Create a normal Supabase account, then grant it membership in `public.admin_users` using [docs/ADMIN-PROFILE-SETUP.md](docs/ADMIN-PROFILE-SETUP.md). There is no hardcoded admin password and ordinary sign-up does not grant editing rights. The editor includes all six answer types, portrait URLs, source references, drafts and publication status. Removal preserves existing game records.
 
 See [database setup and security](docs/DATABASE.md).
 

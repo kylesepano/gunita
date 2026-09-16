@@ -1,6 +1,6 @@
 # Admin access and question management
 
-Open **`/admin`**, or use **Admin** in the footer. Administrators can search and view the complete answer key, add events, edit every question field, publish/unpublish questions, and remove questions from future games.
+Open **`/admin`** directly. Administrators can search and view the complete answer key, add events, edit every question field, publish/unpublish questions, and remove questions from future games. For the shortest registration and role-grant flow, see [ADMIN-PROFILE-SETUP.md](ADMIN-PROFILE-SETUP.md).
 
 ## Enable your account once
 

@@ -1,16 +1,10 @@
-import { useState } from 'react'
 import { Navigate, Link } from 'react-router-dom'
-import { Trophy, ArrowRight, Check, Save } from 'lucide-react'
+import { Trophy, ArrowRight, Check } from 'lucide-react'
 import { useGame } from '../stores/gameStore'
 import { categories } from '../game/roulette'
 import { CategoryIcon } from '../components/CategoryIcon'
-import { useAuth } from '../features/auth/AuthProvider'
-import { saveResults } from '../lib/saveResults'
 export default function ResultsPage() {
   const s = useGame()
-  const { user } = useAuth()
-  const [message, setMessage] = useState('')
-  const [saving, setSaving] = useState(false)
   if (s.phase !== 'completed' || !s.results.length)
     return <Navigate to={s.deck.length ? '/game' : '/play'} replace />
   const total = s.results.reduce((sum, r) => sum + r.breakdown.total, 0)
@@ -100,36 +94,9 @@ export default function ResultsPage() {
         </Link>
       </div>
       <div className="save-results">
-        {user ? (
-          <button
-            className="text-link"
-            disabled={saving}
-            onClick={async () => {
-              setSaving(true)
-              try {
-                await saveResults(user.id)
-                setMessage('Your expedition is saved to your account.')
-              } catch (e) {
-                setMessage(
-                  e instanceof Error ? e.message : 'Could not save results. Please try again.',
-                )
-              } finally {
-                setSaving(false)
-              }
-            }}
-          >
-            <Save size={17} />
-            {saving ? 'Saving…' : 'Save to my account'}
-          </button>
-        ) : (
-          <Link className="text-link" to="/auth">
-            Sign in to save this expedition <ArrowRight size={16} />
-          </Link>
-        )}
         <p className="small-note">
           <Check size={14} /> Your results are saved in this browser until you begin a new game.
         </p>
-        {message && <p role="status">{message}</p>}
       </div>
     </div>
   )

@@ -133,7 +133,7 @@ export const useGame = create<GameState>()(
         set({
           phase: fixed ? 'answering' : nextPhase(s.round),
           round,
-          category: fixed ? (s.mode as 'where' | 'when') : null,
+          category: fixed && s.mode !== 'roulette' ? s.mode : null,
           answer: null,
           challenge: fixed ? generateChallenge(event, s.difficulty, s.catalog) : null,
           startedAt: Date.now(),

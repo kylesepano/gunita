@@ -46,8 +46,10 @@ export default function GamePage() {
             : `${s.scope === 'world' ? 'WORLD' : 'PHILIPPINE'} HISTORY`}
         </span>
         <span className="difficulty-tag">
-          {s.mode === 'roulette' ? 'Roulette' : `${s.mode === 'where' ? 'Where' : 'When'} only`} ·{' '}
-          {s.difficulty}
+          {s.mode === 'roulette'
+            ? 'Roulette'
+            : `${categories.find((category) => category.type === s.mode)?.english} only`}{' '}
+          · {s.difficulty}
         </span>
       </div>
       <div className="scorebar">

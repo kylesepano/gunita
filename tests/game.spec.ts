@@ -61,8 +61,8 @@ test('mobile layout, archive search and missing-cloud guest flow', async ({ page
   await page.goto('/archive')
   await page.getByRole('textbox', { name: 'Search history' }).fill('Mactan')
   await expect(page.locator('.archive-card')).toHaveCount(1)
-  await page.goto('/auth')
-  await expect(page.getByRole('link', { name: 'Play as guest' })).toBeVisible()
+  await expect(page.getByRole('link', { name: /sign in|my account/i })).toHaveCount(0)
+  await expect(page.getByRole('link', { name: 'Admin', exact: true })).toHaveCount(0)
 })
 test('desktop landing screenshot', async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 1100 })

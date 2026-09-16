@@ -1,7 +1,7 @@
 export type Difficulty = 'easy' | 'medium' | 'hard'
 export type Scope = 'mixed' | 'philippines' | 'world'
 export type QuestionType = 'who' | 'where' | 'when' | 'what' | 'why' | 'how'
-export type GameMode = 'roulette' | 'where' | 'when'
+export type GameMode = 'roulette' | QuestionType
 export interface Person {
   id: string
   name: string

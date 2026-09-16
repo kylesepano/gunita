@@ -11,6 +11,10 @@ import {
   MapPin,
   CalendarDays,
   RotateCw,
+  UserRound,
+  CircleHelp,
+  Lightbulb,
+  ListOrdered,
 } from 'lucide-react'
 import type { Scope, Difficulty, GameMode } from '../types/history'
 import { useGame } from '../stores/gameStore'
@@ -24,7 +28,7 @@ export default function PlayPage() {
   const [params] = useSearchParams()
   const category = categories.find((c) => c.type === params.get('category'))
   const [mode, setMode] = useState<GameMode>(() =>
-    ['where', 'when'].includes(params.get('category') ?? '')
+    ['who', 'where', 'when', 'what', 'why', 'how'].includes(params.get('category') ?? '')
       ? (params.get('category') as GameMode)
       : 'roulette',
   )
@@ -56,7 +60,7 @@ export default function PlayPage() {
           <span>01</span>
           <div>
             <h2>Choose your game mode</h2>
-            <p>Focus on places or dates, or let the wheel choose.</p>
+            <p>Choose one question type, or let the wheel choose each round.</p>
           </div>
         </div>
         <div className="mode-grid">
@@ -69,6 +73,12 @@ export default function PlayPage() {
                 Icon: RotateCw,
               },
               {
+                id: 'who',
+                title: 'Who only',
+                text: 'Ten people challenges. No roulette.',
+                Icon: UserRound,
+              },
+              {
                 id: 'where',
                 title: 'Where only',
                 text: 'Ten location challenges. No roulette.',
@@ -79,6 +89,24 @@ export default function PlayPage() {
                 title: 'When only',
                 text: 'Ten year challenges. No roulette.',
                 Icon: CalendarDays,
+              },
+              {
+                id: 'what',
+                title: 'What only',
+                text: 'Ten event challenges. No roulette.',
+                Icon: CircleHelp,
+              },
+              {
+                id: 'why',
+                title: 'Why only',
+                text: 'Ten cause challenges. No roulette.',
+                Icon: Lightbulb,
+              },
+              {
+                id: 'how',
+                title: 'How only',
+                text: 'Ten sequence challenges. No roulette.',
+                Icon: ListOrdered,
               },
             ] as const
           ).map((option) => (
@@ -173,7 +201,7 @@ export default function PlayPage() {
           <span>
             {mode === 'roulette'
               ? 'All 6 challenge types'
-              : `${mode === 'where' ? 'Location' : 'Year'} challenges only`}
+              : `${categories.find((category) => category.type === mode)?.english} challenges only`}
           </span>
         </div>
         {available > 0 && available < 10 && (

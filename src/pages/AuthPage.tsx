@@ -128,17 +128,15 @@ export default function AuthPage({ admin = false }: { admin?: boolean }) {
                 <ArrowRight size={17} />
               </button>
             </form>
-            {!admin && (
-              <button
-                className="text-link"
-                onClick={() => {
-                  setSignup(!signup)
-                  setMessage('')
-                }}
-              >
-                {signup ? 'Already have an account? Sign in' : 'New to Gunita? Create an account'}
-              </button>
-            )}
+            <button
+              className="text-link"
+              onClick={() => {
+                setSignup(!signup)
+                setMessage('')
+              }}
+            >
+              {signup ? 'Already have an account? Sign in' : 'New to Gunita? Create an account'}
+            </button>
             <Link className="back-link" to="/play">
               Or continue as a guest →
             </Link>

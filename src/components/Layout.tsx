@@ -1,8 +1,6 @@
 import { Link, NavLink, Outlet } from 'react-router-dom'
-import { Compass, ArrowUpRight } from 'lucide-react'
-import { useAuth } from '../features/auth/AuthProvider'
+import { Compass } from 'lucide-react'
 export function Layout() {
-  const { user } = useAuth()
   return (
     <>
       <header className="site-header">
@@ -29,9 +27,6 @@ export function Layout() {
               <Link to="/archive">The archive</Link>
             </div>
           </details>
-          <Link to="/auth" className="sign-in">
-            {user ? 'My account' : 'Sign in'} <ArrowUpRight size={16} />
-          </Link>
         </div>
       </header>
       <main>
@@ -43,9 +38,6 @@ export function Layout() {
         </Link>
         <span>The past has a story. Find your way into it.</span>
         <span>Made with curiosity. Rooted in history.</span>
-        <Link to="/admin" className="admin-footer-link">
-          Admin
-        </Link>
       </footer>
     </>
   )
