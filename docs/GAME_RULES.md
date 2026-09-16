@@ -1,6 +1,6 @@
 # Game rules
 
-Each expedition has ten rounds. In Roulette mode, six categories are drawn independently with equal probability. In Where only or When only mode, every round goes straight to the corresponding map or year challenge without displaying or spinning a roulette.
+Each expedition has ten rounds. In Roulette mode, six categories are drawn independently with equal probability. In Who, Where, When, What, Why or How only mode, every round goes straight to the selected challenge without displaying or spinning a roulette.
 
 | Category | Interaction                                                                                                                                                         |
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |

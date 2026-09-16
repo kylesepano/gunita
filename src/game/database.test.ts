@@ -16,16 +16,20 @@ it('applies schema and seed, saves atomically, and isolates private data with RL
     expect(
       (await db.query<{ count: number }>('select count(*)::int as count from historical_events'))
         .rows[0].count,
-    ).toBe(10)
+    ).toBeGreaterThanOrEqual(100)
     expect(
       (await db.query<{ count: number }>('select count(*)::int as count from event_sequence'))
         .rows[0].count,
-    ).toBe(40)
+    ).toBeGreaterThanOrEqual(400)
     await db.exec(
       `insert into auth.users values('00000000-0000-0000-0000-000000000001'),('00000000-0000-0000-0000-000000000002'); set role anon;`,
     )
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(10)
-    expect((await db.query('select * from historical_people')).rows).toHaveLength(10)
+    expect((await db.query('select * from historical_events')).rows.length).toBeGreaterThanOrEqual(
+      100,
+    )
+    expect((await db.query('select * from historical_people')).rows.length).toBeGreaterThanOrEqual(
+      100,
+    )
     await expect(db.query(`update historical_events set title='tampered'`)).rejects.toThrow()
     await db.exec(
       `reset role; set role authenticated; select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000001',false);`,
@@ -73,8 +77,8 @@ it('applies schema and seed, saves atomically, and isolates private data with RL
     await db.exec(
       `reset role; update historical_events set is_published=false where slug='mactan'; set role anon;`,
     )
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(9)
-    expect((await db.query('select * from historical_people')).rows).toHaveLength(9)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(123)
+    expect((await db.query('select * from historical_people')).rows).toHaveLength(123)
   } finally {
     await db.close()
   }

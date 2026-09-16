@@ -34,6 +34,8 @@ export interface CatalogRow {
       short_bio: string
       image_url: string | null
       image_position: string | null
+      birth_year: number | null
+      death_year: number | null
     }
   }[]
   event_causes: { description: string; sort_order: number }[]
@@ -71,6 +73,8 @@ export function mapCatalogRow(row: CatalogRow): CatalogEntry {
         bio: p.short_bio,
         image: p.image_url ?? '',
         imagePosition: p.image_position ?? undefined,
+        birthYear: p.birth_year ?? undefined,
+        deathYear: p.death_year ?? undefined,
       },
     },
   }
@@ -78,7 +82,7 @@ export function mapCatalogRow(row: CatalogRow): CatalogEntry {
 export async function fetchCatalog(admin = false): Promise<CatalogEntry[]> {
   if (!supabase)
     return events.map((event) => ({
-      event: { ...event, distractors: causeDistractors[event.id] },
+      event: { ...event, distractors: event.distractors ?? causeDistractors[event.id] },
       published: true,
       updatedAt: '',
     }))
@@ -88,7 +92,7 @@ export async function fetchCatalog(admin = false): Promise<CatalogEntry[]> {
     let query = supabase
       .from('historical_events')
       .select(
-        '*, event_people(role,is_primary,historical_people(slug,name,short_bio,image_url,image_position)), event_causes(description,sort_order), event_sequence(description,sort_order)',
+        '*, event_people(role,is_primary,historical_people(slug,name,short_bio,image_url,image_position,birth_year,death_year)), event_causes(description,sort_order), event_sequence(description,sort_order)',
       )
       .eq('is_deleted', false)
       .order('slug')

@@ -54,6 +54,7 @@ export function AdminEventForm({
         bio: text('personBio'),
         image: text('personImage'),
         imagePosition: text('imagePosition') || '50% 25%',
+        birthYear: number('personBirthYear'),
       },
       causes: lines('causes'),
       distractors: lines('distractors'),
@@ -207,6 +208,17 @@ export function AdminEventForm({
             defaultValue={e?.person.image}
             required
             placeholder="https://… or /portraits/person.jpg"
+          />
+        </label>
+        <label>
+          Person birth year (optional; use a negative number for BCE)
+          <input
+            name="personBirthYear"
+            type="number"
+            step="1"
+            min="-10000"
+            max="3000"
+            defaultValue={e?.person.birthYear ?? ''}
           />
         </label>
         <p className="small-note">

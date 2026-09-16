@@ -1,0 +1,800 @@
+{
+  "bank-cavite-mutiny": {
+    "person": "José Burgos",
+    "event": "Cavite Mutiny",
+    "sourcePage": "https://en.wikipedia.org/wiki/Cavite_mutiny",
+    "imagePath": "/portraits/bank-cavite-mutiny.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-la-solidaridad": {
+    "person": "Marcelo H. del Pilar",
+    "event": "La Solidaridad Founded",
+    "sourcePage": "https://en.wikipedia.org/wiki/La_Solidaridad",
+    "imagePath": "/portraits/bank-la-solidaridad.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-rizal-execution": {
+    "person": "José Rizal",
+    "event": "Execution of José Rizal",
+    "sourcePage": "https://en.wikipedia.org/wiki/Execution_of_José_Rizal",
+    "imagePath": "/portraits/bank-rizal-execution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-pugad-lawin-expanded": {
+    "person": "Andrés Bonifacio",
+    "event": "Cry of Pugad Lawin",
+    "sourcePage": "https://en.wikipedia.org/wiki/Cry_of_Pugad_Lawin",
+    "imagePath": "/portraits/bank-pugad-lawin-expanded.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-pact-biak-na-bato": {
+    "person": "Emilio Aguinaldo",
+    "event": "Pact of Biak-na-Bato",
+    "sourcePage": "https://en.wikipedia.org/wiki/Pact_of_Biak-na-Bato",
+    "imagePath": "/portraits/bank-pact-biak-na-bato.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-battle-manila-bay": {
+    "person": "George Dewey",
+    "event": "Battle of Manila Bay",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Manila_Bay",
+    "imagePath": "/portraits/bank-battle-manila-bay.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-malolos-congress": {
+    "person": "Felipe Calderón",
+    "event": "Malolos Congress Opens",
+    "sourcePage": "https://en.wikipedia.org/wiki/Malolos_Congress",
+    "imagePath": "/portraits/bank-malolos-congress.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-malolos-constitution": {
+    "person": "Apolinario Mabini",
+    "event": "Malolos Constitution",
+    "sourcePage": "https://en.wikipedia.org/wiki/Malolos_Constitution",
+    "imagePath": "/portraits/bank-malolos-constitution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-philippine-american-war": {
+    "person": "Emilio Aguinaldo",
+    "event": "Philippine–American War Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/Philippine–American_War",
+    "imagePath": "/portraits/bank-philippine-american-war.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-first-philippine-republic": {
+    "person": "Emilio Aguinaldo",
+    "event": "First Philippine Republic Inaugurated",
+    "sourcePage": "https://en.wikipedia.org/wiki/First_Philippine_Republic",
+    "imagePath": "/portraits/bank-first-philippine-republic.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-balangiga-encounter": {
+    "person": "Vicente Lukbán",
+    "event": "Balangiga Encounter",
+    "sourcePage": "https://en.wikipedia.org/wiki/Balangiga_encounter",
+    "imagePath": "/portraits/bank-balangiga-encounter.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-philippine-assembly": {
+    "person": "Sergio Osmeña",
+    "event": "First Philippine Assembly",
+    "sourcePage": "https://en.wikipedia.org/wiki/First_Philippine_Assembly",
+    "imagePath": "/portraits/bank-philippine-assembly.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-jones-law": {
+    "person": "William Atkinson Jones",
+    "event": "Jones Law",
+    "sourcePage": "https://en.wikipedia.org/wiki/Jones_Law_(Philippines)",
+    "imagePath": "/portraits/bank-jones-law.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-tydings-mcduffie": {
+    "person": "Manuel L. Quezon",
+    "event": "Tydings–McDuffie Act",
+    "sourcePage": "https://en.wikipedia.org/wiki/Tydings–McDuffie_Act",
+    "imagePath": "/portraits/bank-tydings-mcduffie.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-1935-constitution": {
+    "person": "Claro M. Recto",
+    "event": "1935 Philippine Constitution",
+    "sourcePage": "https://en.wikipedia.org/wiki/1935_Constitution_of_the_Philippines",
+    "imagePath": "/portraits/bank-1935-constitution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-commonwealth-inauguration": {
+    "person": "Manuel L. Quezon",
+    "event": "Philippine Commonwealth Inauguration",
+    "sourcePage": "https://en.wikipedia.org/wiki/Philippine_Commonwealth",
+    "imagePath": "/portraits/bank-commonwealth-inauguration.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-bataan-death-march": {
+    "person": "Douglas MacArthur",
+    "event": "Bataan Death March",
+    "sourcePage": "https://en.wikipedia.org/wiki/Bataan_Death_March",
+    "imagePath": "/portraits/bank-bataan-death-march.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-leyte-landing": {
+    "person": "Douglas MacArthur",
+    "event": "Leyte Landing",
+    "sourcePage": "https://en.wikipedia.org/wiki/Leyte_landing",
+    "imagePath": "/portraits/bank-leyte-landing.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-battle-leyte-gulf": {
+    "person": "William Halsey Jr.",
+    "event": "Battle of Leyte Gulf",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Leyte_Gulf",
+    "imagePath": "/portraits/bank-battle-leyte-gulf.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-manila-liberation": {
+    "person": "Tomoyuki Yamashita",
+    "event": "Battle of Manila",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Manila_(1945)",
+    "imagePath": "/portraits/bank-manila-liberation.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-philippine-independence-1946": {
+    "person": "Manuel Roxas",
+    "event": "Philippine Independence Recognized",
+    "sourcePage": "https://en.wikipedia.org/wiki/Philippine_independence",
+    "imagePath": "/portraits/bank-philippine-independence-1946.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-treaty-manila": {
+    "person": "Paul McNutt",
+    "event": "Treaty of Manila",
+    "sourcePage": "https://en.wikipedia.org/wiki/Treaty_of_Manila_(1946)",
+    "imagePath": "/portraits/bank-treaty-manila.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-martial-law-declaration": {
+    "person": "Ferdinand Marcos",
+    "event": "Martial Law Declared",
+    "sourcePage": "https://en.wikipedia.org/wiki/Martial_law_under_Ferdinand_Marcos",
+    "imagePath": "/portraits/bank-martial-law-declaration.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-aquino-oath": {
+    "person": "Corazon Aquino",
+    "event": "Corazon Aquino Takes Office",
+    "sourcePage": "https://en.wikipedia.org/wiki/Corazon_Aquino",
+    "imagePath": "/portraits/bank-aquino-oath.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-pinatubo-eruption": {
+    "person": "Raymundo Punongbayan",
+    "event": "Mount Pinatubo Eruption",
+    "sourcePage": "https://en.wikipedia.org/wiki/1991_eruption_of_Mount_Pinatubo",
+    "imagePath": "/portraits/bank-pinatubo-eruption.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-hammurabi-code": {
+    "person": "Hammurabi",
+    "event": "Code of Hammurabi",
+    "sourcePage": "https://en.wikipedia.org/wiki/Code_of_Hammurabi",
+    "imagePath": "/portraits/bank-hammurabi-code.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-marathon": {
+    "person": "Miltiades",
+    "event": "Battle of Marathon",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Marathon",
+    "imagePath": "/portraits/bank-marathon.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-parthenon": {
+    "person": "Pericles",
+    "event": "Parthenon Construction Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/Parthenon",
+    "imagePath": "/portraits/bank-parthenon.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-gaugamela": {
+    "person": "Alexander the Great",
+    "event": "Battle of Gaugamela",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Gaugamela",
+    "imagePath": "/portraits/bank-gaugamela.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-qin-unification": {
+    "person": "Qin Shi Huang",
+    "event": "Qin Unifies China",
+    "sourcePage": "https://en.wikipedia.org/wiki/Qin_dynasty",
+    "imagePath": "/portraits/bank-qin-unification.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-kushan": {
+    "person": "Kanishka",
+    "event": "Kushan Empire at Its Height",
+    "sourcePage": "https://en.wikipedia.org/wiki/Kanishka",
+    "imagePath": "/portraits/bank-kushan.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-pompeii": {
+    "person": "Pliny the Younger",
+    "event": "Eruption of Mount Vesuvius",
+    "sourcePage": "https://en.wikipedia.org/wiki/Pliny_the_Younger",
+    "imagePath": "/portraits/bank-pompeii.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-constantine-milan": {
+    "person": "Constantine the Great",
+    "event": "Edict of Milan",
+    "sourcePage": "https://en.wikipedia.org/wiki/Edict_of_Milan",
+    "imagePath": "/portraits/bank-constantine-milan.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-fall-western-rome": {
+    "person": "Odoacer",
+    "event": "Fall of the Western Roman Empire",
+    "sourcePage": "https://en.wikipedia.org/wiki/Fall_of_the_Western_Roman_Empire",
+    "imagePath": "/portraits/bank-fall-western-rome.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-hijra": {
+    "person": "Muhammad",
+    "event": "Hijra to Medina",
+    "sourcePage": "https://en.wikipedia.org/wiki/Hijrah",
+    "imagePath": "/portraits/bank-hijra.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-battle-tours": {
+    "person": "Charles Martel",
+    "event": "Battle of Tours",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Tours",
+    "imagePath": "/portraits/bank-battle-tours.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-magna-carta": {
+    "person": "King John",
+    "event": "Magna Carta Sealed",
+    "sourcePage": "https://en.wikipedia.org/wiki/Magna_Carta",
+    "imagePath": "/portraits/bank-magna-carta.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-black-death": {
+    "person": "Giovanni Boccaccio",
+    "event": "Black Death Reaches Europe",
+    "sourcePage": "https://en.wikipedia.org/wiki/Black_Death",
+    "imagePath": "/portraits/bank-black-death.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-gutenberg-bible": {
+    "person": "Johannes Gutenberg",
+    "event": "Gutenberg Bible Printed",
+    "sourcePage": "https://en.wikipedia.org/wiki/Gutenberg_Bible",
+    "imagePath": "/portraits/bank-gutenberg-bible.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-columbus-voyage": {
+    "person": "Christopher Columbus",
+    "event": "Columbus Reaches the Caribbean",
+    "sourcePage": "https://en.wikipedia.org/wiki/Christopher_Columbus",
+    "imagePath": "/portraits/bank-columbus-voyage.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-reformation": {
+    "person": "Martin Luther",
+    "event": "Luther’s Ninety-Five Theses",
+    "sourcePage": "https://en.wikipedia.org/wiki/Ninety-five_Theses",
+    "imagePath": "/portraits/bank-reformation.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-circumnavigation": {
+    "person": "Juan Sebastián Elcano",
+    "event": "First Circumnavigation Completed",
+    "sourcePage": "https://en.wikipedia.org/wiki/Magellan%27s_circumnavigation",
+    "imagePath": "/portraits/bank-circumnavigation.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-galileo-telescope": {
+    "person": "Galileo Galilei",
+    "event": "Galileo Publishes Telescopic Observations",
+    "sourcePage": "https://en.wikipedia.org/wiki/Sidereus_Nuncius",
+    "imagePath": "/portraits/bank-galileo-telescope.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-mayflower": {
+    "person": "William Bradford",
+    "event": "Mayflower Reaches North America",
+    "sourcePage": "https://en.wikipedia.org/wiki/Mayflower",
+    "imagePath": "/portraits/bank-mayflower.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-english-civil-war": {
+    "person": "Oliver Cromwell",
+    "event": "English Civil War Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/English_Civil_War",
+    "imagePath": "/portraits/bank-english-civil-war.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-glorious-revolution": {
+    "person": "William of Orange",
+    "event": "Glorious Revolution",
+    "sourcePage": "https://en.wikipedia.org/wiki/Glorious_Revolution",
+    "imagePath": "/portraits/bank-glorious-revolution.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-encyclopedie": {
+    "person": "Denis Diderot",
+    "event": "Encyclopédie First Volume",
+    "sourcePage": "https://en.wikipedia.org/wiki/Encyclopédie",
+    "imagePath": "/portraits/bank-encyclopedie.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-steam-engine": {
+    "person": "James Watt",
+    "event": "Watt Improves the Steam Engine",
+    "sourcePage": "https://en.wikipedia.org/wiki/James_Watt",
+    "imagePath": "/portraits/bank-steam-engine.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-american-declaration": {
+    "person": "Thomas Jefferson",
+    "event": "United States Declaration of Independence",
+    "sourcePage": "https://en.wikipedia.org/wiki/United_States_Declaration_of_Independence",
+    "imagePath": "/portraits/bank-american-declaration.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-french-revolution": {
+    "person": "Maximilien Robespierre",
+    "event": "French Revolution Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/French_Revolution",
+    "imagePath": "/portraits/bank-french-revolution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-haitian-revolution": {
+    "person": "Toussaint Louverture",
+    "event": "Haitian Revolution Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/Haitian_Revolution",
+    "imagePath": "/portraits/bank-haitian-revolution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-waterloo-expanded": {
+    "person": "Arthur Wellesley",
+    "event": "Battle of Waterloo",
+    "sourcePage": "https://en.wikipedia.org/wiki/Battle_of_Waterloo",
+    "imagePath": "/portraits/bank-waterloo-expanded.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-congress-vienna": {
+    "person": "Klemens von Metternich",
+    "event": "Congress of Vienna",
+    "sourcePage": "https://en.wikipedia.org/wiki/Congress_of_Vienna",
+    "imagePath": "/portraits/bank-congress-vienna.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-greek-independence": {
+    "person": "Theodoros Kolokotronis",
+    "event": "Greek War of Independence",
+    "sourcePage": "https://en.wikipedia.org/wiki/Greek_War_of_Independence",
+    "imagePath": "/portraits/bank-greek-independence.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-stockton-darlington": {
+    "person": "George Stephenson",
+    "event": "Stockton and Darlington Railway Opens",
+    "sourcePage": "https://en.wikipedia.org/wiki/Stockton_and_Darlington_Railway",
+    "imagePath": "/portraits/bank-stockton-darlington.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-abolition-british": {
+    "person": "William Wilberforce",
+    "event": "Slavery Abolition Act",
+    "sourcePage": "https://en.wikipedia.org/wiki/Slavery_Abolition_Act_1833",
+    "imagePath": "/portraits/bank-abolition-british.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-opium-war": {
+    "person": "Lin Zexu",
+    "event": "First Opium War Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/First_Opium_War",
+    "imagePath": "/portraits/bank-opium-war.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-waitangi": {
+    "person": "Hone Heke",
+    "event": "Treaty of Waitangi Signed",
+    "sourcePage": "https://en.wikipedia.org/wiki/Treaty_of_Waitangi",
+    "imagePath": "/portraits/bank-waitangi.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-seneca-falls": {
+    "person": "Elizabeth Cady Stanton",
+    "event": "Seneca Falls Convention",
+    "sourcePage": "https://en.wikipedia.org/wiki/Seneca_Falls_Convention",
+    "imagePath": "/portraits/bank-seneca-falls.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-california-gold-rush": {
+    "person": "James W. Marshall",
+    "event": "California Gold Rush",
+    "sourcePage": "https://en.wikipedia.org/wiki/California_Gold_Rush",
+    "imagePath": "/portraits/bank-california-gold-rush.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-indian-rebellion": {
+    "person": "Rani Lakshmibai",
+    "event": "Indian Rebellion of 1857",
+    "sourcePage": "https://en.wikipedia.org/wiki/Indian_Rebellion_of_1857",
+    "imagePath": "/portraits/bank-indian-rebellion.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-origin-species": {
+    "person": "Charles Darwin",
+    "event": "On the Origin of Species Published",
+    "sourcePage": "https://en.wikipedia.org/wiki/On_the_Origin_of_Species",
+    "imagePath": "/portraits/bank-origin-species.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-american-civil-war": {
+    "person": "Abraham Lincoln",
+    "event": "American Civil War Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/American_Civil_War",
+    "imagePath": "/portraits/bank-american-civil-war.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-emancipation-proclamation": {
+    "person": "Abraham Lincoln",
+    "event": "Emancipation Proclamation",
+    "sourcePage": "https://en.wikipedia.org/wiki/Emancipation_Proclamation",
+    "imagePath": "/portraits/bank-emancipation-proclamation.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-red-cross": {
+    "person": "Henry Dunant",
+    "event": "International Red Cross Founded",
+    "sourcePage": "https://en.wikipedia.org/wiki/International_Committee_of_the_Red_Cross",
+    "imagePath": "/portraits/bank-red-cross.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-meiji-restoration": {
+    "person": "Emperor Meiji",
+    "event": "Meiji Restoration",
+    "sourcePage": "https://en.wikipedia.org/wiki/Meiji_Restoration",
+    "imagePath": "/portraits/bank-meiji-restoration.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-suez-canal": {
+    "person": "Ferdinand de Lesseps",
+    "event": "Suez Canal Opens",
+    "sourcePage": "https://en.wikipedia.org/wiki/Suez_Canal",
+    "imagePath": "/portraits/bank-suez-canal.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-paris-commune": {
+    "person": "Louise Michel",
+    "event": "Paris Commune",
+    "sourcePage": "https://en.wikipedia.org/wiki/Paris_Commune",
+    "imagePath": "/portraits/bank-paris-commune.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-telephone-patent": {
+    "person": "Alexander Graham Bell",
+    "event": "Bell Patents the Telephone",
+    "sourcePage": "https://en.wikipedia.org/wiki/History_of_the_telephone",
+    "imagePath": "/portraits/bank-telephone-patent.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-berlin-conference": {
+    "person": "Otto von Bismarck",
+    "event": "Berlin Conference",
+    "sourcePage": "https://en.wikipedia.org/wiki/Berlin_Conference",
+    "imagePath": "/portraits/bank-berlin-conference.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-statue-liberty": {
+    "person": "Frédéric Auguste Bartholdi",
+    "event": "Statue of Liberty Dedicated",
+    "sourcePage": "https://en.wikipedia.org/wiki/Statue_of_Liberty",
+    "imagePath": "/portraits/bank-statue-liberty.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-eiffel-tower": {
+    "person": "Gustave Eiffel",
+    "event": "Eiffel Tower Opens",
+    "sourcePage": "https://en.wikipedia.org/wiki/Eiffel_Tower",
+    "imagePath": "/portraits/bank-eiffel-tower.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-radioactivity": {
+    "person": "Marie Curie",
+    "event": "Radioactivity Research Recognized",
+    "sourcePage": "https://en.wikipedia.org/wiki/Marie_Curie",
+    "imagePath": "/portraits/bank-radioactivity.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-wright-flight": {
+    "person": "Orville Wright",
+    "event": "First Powered Wright Flight",
+    "sourcePage": "https://en.wikipedia.org/wiki/Wright_brothers",
+    "imagePath": "/portraits/bank-wright-flight.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-panama-canal": {
+    "person": "George Washington Goethals",
+    "event": "Panama Canal Opens",
+    "sourcePage": "https://en.wikipedia.org/wiki/Panama_Canal",
+    "imagePath": "/portraits/bank-panama-canal.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-russian-revolution": {
+    "person": "Vladimir Lenin",
+    "event": "October Revolution",
+    "sourcePage": "https://en.wikipedia.org/wiki/October_Revolution",
+    "imagePath": "/portraits/bank-russian-revolution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-wwi-armistice": {
+    "person": "Ferdinand Foch",
+    "event": "Armistice of 11 November",
+    "sourcePage": "https://en.wikipedia.org/wiki/Armistice_of_11_November_1918",
+    "imagePath": "/portraits/bank-wwi-armistice.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-league-nations": {
+    "person": "Woodrow Wilson",
+    "event": "League of Nations Begins",
+    "sourcePage": "https://en.wikipedia.org/wiki/League_of_Nations",
+    "imagePath": "/portraits/bank-league-nations.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-penicillin": {
+    "person": "Alexander Fleming",
+    "event": "Penicillin Discovery",
+    "sourcePage": "https://en.wikipedia.org/wiki/Alexander_Fleming",
+    "imagePath": "/portraits/bank-penicillin.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-wall-street-crash": {
+    "person": "Herbert Hoover",
+    "event": "Wall Street Crash",
+    "sourcePage": "https://en.wikipedia.org/wiki/Wall_Street_Crash_of_1929",
+    "imagePath": "/portraits/bank-wall-street-crash.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-salt-march": {
+    "person": "Mahatma Gandhi",
+    "event": "Salt March",
+    "sourcePage": "https://en.wikipedia.org/wiki/Salt_March",
+    "imagePath": "/portraits/bank-salt-march.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-munich-agreement": {
+    "person": "Neville Chamberlain",
+    "event": "Munich Agreement",
+    "sourcePage": "https://en.wikipedia.org/wiki/Munich_Agreement",
+    "imagePath": "/portraits/bank-munich-agreement.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-pearl-harbor": {
+    "person": "Isoroku Yamamoto",
+    "event": "Attack on Pearl Harbor",
+    "sourcePage": "https://en.wikipedia.org/wiki/Attack_on_Pearl_Harbor",
+    "imagePath": "/portraits/bank-pearl-harbor.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-un-d-day": {
+    "person": "Dwight D. Eisenhower",
+    "event": "D-Day Normandy Landings",
+    "sourcePage": "https://en.wikipedia.org/wiki/Normandy_landings",
+    "imagePath": "/portraits/bank-un-d-day.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-auschwitz-liberation": {
+    "person": "Vasily Petrenko",
+    "event": "Auschwitz Liberated",
+    "sourcePage": "https://en.wikipedia.org/wiki/Liberation_of_Auschwitz_concentration_camp",
+    "imagePath": "/portraits/bank-auschwitz-liberation.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-united-nations": {
+    "person": "Eleanor Roosevelt",
+    "event": "United Nations Charter Signed",
+    "sourcePage": "https://en.wikipedia.org/wiki/United_Nations_Charter",
+    "imagePath": "/portraits/bank-united-nations.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-nuremberg-trials": {
+    "person": "Robert H. Jackson",
+    "event": "Nuremberg Trials Begin",
+    "sourcePage": "https://en.wikipedia.org/wiki/Nuremberg_trials",
+    "imagePath": "/portraits/bank-nuremberg-trials.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-india-independence": {
+    "person": "Jawaharlal Nehru",
+    "event": "Indian Independence",
+    "sourcePage": "https://en.wikipedia.org/wiki/Indian_independence",
+    "imagePath": "/portraits/bank-india-independence.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-marshall-plan": {
+    "person": "George C. Marshall",
+    "event": "Marshall Plan Announced",
+    "sourcePage": "https://en.wikipedia.org/wiki/Marshall_Plan",
+    "imagePath": "/portraits/bank-marshall-plan.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-israel-declaration": {
+    "person": "David Ben-Gurion",
+    "event": "Israeli Declaration of Independence",
+    "sourcePage": "https://en.wikipedia.org/wiki/Israeli_Declaration_of_Independence",
+    "imagePath": "/portraits/bank-israel-declaration.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-nato": {
+    "person": "Dean Acheson",
+    "event": "NATO Founded",
+    "sourcePage": "https://en.wikipedia.org/wiki/North_Atlantic_Treaty",
+    "imagePath": "/portraits/bank-nato.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-everest": {
+    "person": "Edmund Hillary",
+    "event": "First Ascent of Mount Everest",
+    "sourcePage": "https://en.wikipedia.org/wiki/1953_British_Mount_Everest_expedition",
+    "imagePath": "/portraits/bank-everest.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-korean-armistice": {
+    "person": "William K. Harrison Jr.",
+    "event": "Korean Armistice",
+    "sourcePage": "https://en.wikipedia.org/wiki/Korean_Armistice_Agreement",
+    "imagePath": "/portraits/bank-korean-armistice.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-salk-vaccine": {
+    "person": "Jonas Salk",
+    "event": "Polio Vaccine Announced",
+    "sourcePage": "https://en.wikipedia.org/wiki/Polio_vaccine",
+    "imagePath": "/portraits/bank-salk-vaccine.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-montgomery-bus": {
+    "person": "Rosa Parks",
+    "event": "Montgomery Bus Boycott",
+    "sourcePage": "https://en.wikipedia.org/wiki/Montgomery_bus_boycott",
+    "imagePath": "/portraits/bank-montgomery-bus.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-sputnik": {
+    "person": "Sergei Korolev",
+    "event": "Sputnik 1 Launches",
+    "sourcePage": "https://en.wikipedia.org/wiki/Sputnik_1",
+    "imagePath": "/portraits/bank-sputnik.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-cuban-revolution": {
+    "person": "Fidel Castro",
+    "event": "Cuban Revolution Triumphs",
+    "sourcePage": "https://en.wikipedia.org/wiki/Cuban_Revolution",
+    "imagePath": "/portraits/bank-cuban-revolution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-cuban-missile-crisis": {
+    "person": "John F. Kennedy",
+    "event": "Cuban Missile Crisis",
+    "sourcePage": "https://en.wikipedia.org/wiki/Cuban_Missile_Crisis",
+    "imagePath": "/portraits/bank-cuban-missile-crisis.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-civil-rights-act": {
+    "person": "Lyndon B. Johnson",
+    "event": "Civil Rights Act",
+    "sourcePage": "https://en.wikipedia.org/wiki/Civil_Rights_Act_of_1964",
+    "imagePath": "/portraits/bank-civil-rights-act.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-arpanet": {
+    "person": "Leonard Kleinrock",
+    "event": "ARPANET First Message",
+    "sourcePage": "https://en.wikipedia.org/wiki/History_of_the_Internet",
+    "imagePath": "/portraits/bank-arpanet.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-apollo-11-expanded": {
+    "person": "Buzz Aldrin",
+    "event": "Apollo 11 Moon Landing",
+    "sourcePage": "https://en.wikipedia.org/wiki/Apollo_11",
+    "imagePath": "/portraits/bank-apollo-11-expanded.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-bangladesh-independence": {
+    "person": "Sheikh Mujibur Rahman",
+    "event": "Bangladesh Liberation War",
+    "sourcePage": "https://en.wikipedia.org/wiki/Bangladesh_Liberation_War",
+    "imagePath": "/portraits/bank-bangladesh-independence.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-fall-saigon": {
+    "person": "Le Duan",
+    "event": "Fall of Saigon",
+    "sourcePage": "https://en.wikipedia.org/wiki/Fall_of_Saigon",
+    "imagePath": "/portraits/bank-fall-saigon.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-iranian-revolution": {
+    "person": "Ruhollah Khomeini",
+    "event": "Iranian Revolution",
+    "sourcePage": "https://en.wikipedia.org/wiki/Iranian_Revolution",
+    "imagePath": "/portraits/bank-iranian-revolution.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-chernobyl": {
+    "person": "Viktor Bryukhanov",
+    "event": "Chernobyl Nuclear Disaster",
+    "sourcePage": "https://en.wikipedia.org/wiki/Chernobyl_disaster",
+    "imagePath": "/portraits/bank-chernobyl.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-tiananmen": {
+    "person": "Wu’er Kaixi",
+    "event": "Tiananmen Square Protests",
+    "sourcePage": "https://en.wikipedia.org/wiki/1989_Tiananmen_Square_protests",
+    "imagePath": "/portraits/bank-tiananmen.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-berlin-wall-expanded": {
+    "person": "Mikhail Gorbachev",
+    "event": "Fall of the Berlin Wall",
+    "sourcePage": "https://en.wikipedia.org/wiki/Fall_of_the_Berlin_Wall",
+    "imagePath": "/portraits/bank-berlin-wall-expanded.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-mandela-election": {
+    "person": "Nelson Mandela",
+    "event": "South Africa’s First Democratic Election",
+    "sourcePage": "https://en.wikipedia.org/wiki/1994_South_African_general_election",
+    "imagePath": "/portraits/bank-mandela-election.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-rwanda-genocide": {
+    "person": "Roméo Dallaire",
+    "event": "Rwandan Genocide",
+    "sourcePage": "https://en.wikipedia.org/wiki/Rwandan_genocide",
+    "imagePath": "/portraits/bank-rwanda-genocide.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-good-friday": {
+    "person": "George Mitchell",
+    "event": "Good Friday Agreement",
+    "sourcePage": "https://en.wikipedia.org/wiki/Good_Friday_Agreement",
+    "imagePath": "/portraits/bank-good-friday.svg",
+    "imageType": "Neutral illustration placeholder; replace with a licensed, non-occupational portrait in the admin editor when available."
+  },
+  "bank-nine-eleven": {
+    "person": "George W. Bush",
+    "event": "September 11 Attacks",
+    "sourcePage": "https://en.wikipedia.org/wiki/September_11_attacks",
+    "imagePath": "/portraits/bank-nine-eleven.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-iphone-launch": {
+    "person": "Steve Jobs",
+    "event": "First iPhone Released",
+    "sourcePage": "https://en.wikipedia.org/wiki/IPhone_(1st_generation)",
+    "imagePath": "/portraits/bank-iphone-launch.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-paris-agreement": {
+    "person": "Christiana Figueres",
+    "event": "Paris Climate Agreement Adopted",
+    "sourcePage": "https://en.wikipedia.org/wiki/Paris_Agreement",
+    "imagePath": "/portraits/bank-paris-agreement.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  },
+  "bank-covid-pandemic": {
+    "person": "Tedros Adhanom Ghebreyesus",
+    "event": "COVID-19 Pandemic Declared",
+    "sourcePage": "https://en.wikipedia.org/wiki/COVID-19_pandemic",
+    "imagePath": "/portraits/bank-covid-pandemic.jpg",
+    "imageType": "Wikimedia thumbnail downloaded locally; verify attribution and license before production."
+  }
+}

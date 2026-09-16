@@ -1,11 +1,25 @@
 import type { HistoricalEvent } from '../types/history'
+import { expandedEvents } from './expandedEvents'
+const personAges: Record<string, number> = {
+  lapulapu: 1491,
+  aguinaldo: 1869,
+  bonifacio: 1863,
+  delpilar: 1875,
+  aquino: 1933,
+  napoleon: 1769,
+  armstrong: 1930,
+  schabowski: 1929,
+  eisenhower: 1890,
+  mehmed: 1432,
+}
 const person = (id: string, name: string, bio: string) => ({
   id,
   name,
   bio,
   image: `/portraits/${id}.jpg`,
+  birthYear: personAges[id],
 })
-export const events: HistoricalEvent[] = [
+const coreEvents: HistoricalEvent[] = [
   {
     id: 'mactan',
     title: 'Battle of Mactan',
@@ -268,3 +282,4 @@ export const events: HistoricalEvent[] = [
     note: 'Detailed siege chronology and causal interpretation require editorial review.',
   },
 ]
+export const events: HistoricalEvent[] = [...coreEvents, ...expandedEvents]

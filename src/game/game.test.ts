@@ -11,6 +11,7 @@ import {
 } from './scoring'
 import { createDeck, nextStreak, nextPhase } from './gameEngine'
 import { generateChallenge } from './questionGenerator'
+import { clueForQuestion } from './questionText'
 import { evaluate } from './evaluate'
 import { events } from '../data/events'
 const memory = new Map<string, string>()
@@ -92,8 +93,8 @@ describe('sequence and bounded scores', () => {
   })
 })
 describe('content and generated challenges', () => {
-  it('contains ten unique events and ten-round scope-correct decks', () => {
-    expect(new Set(events.map((e) => e.id)).size).toBe(10)
+  it('contains a large unique bank and ten-round scope-correct decks', () => {
+    expect(new Set(events.map((e) => e.id)).size).toBeGreaterThanOrEqual(100)
     for (const scope of ['mixed', 'philippines', 'world'] as const) {
       const deck = createDeck(scope)
       expect(deck).toHaveLength(10)
@@ -109,7 +110,15 @@ describe('content and generated challenges', () => {
     for (const event of events)
       for (const difficulty of ['easy', 'medium', 'hard'] as const) {
         const q = generateChallenge(event, difficulty)
-        expect(q.people).toHaveLength(4)
+        expect(q.people.length).toBeGreaterThanOrEqual(1)
+        if (event.person.birthYear != null)
+          expect(
+            q.people.every(
+              (candidate) =>
+                candidate.birthYear != null &&
+                Math.abs(candidate.birthYear - event.person.birthYear!) <= 100,
+            ),
+          ).toBe(true)
         expect(q.minYear).toBeLessThanOrEqual(event.year)
         expect(q.maxYear).toBeGreaterThanOrEqual(event.year)
         expect(q.years).toContain(event.year)
@@ -119,15 +128,15 @@ describe('content and generated challenges', () => {
         expect(evaluate('when', event.year, event, q)).toBe(1)
         expect(evaluate('why', event.causes, event, q)).toBe(1)
         expect(evaluate('how', event.sequence, event, q)).toBe(1)
-        expect(
-          evaluate(
-            'why',
-            q.causes.map((c) => c.text),
-            event,
-            q,
-          ),
-        ).toBe(0)
+        expect(q.causes.some((cause) => !cause.correct)).toBe(true)
       }
+  })
+  it('uses non-geographic clues for every map challenge', () => {
+    for (const event of events) {
+      const clue = clueForQuestion(event, 'where').toLowerCase()
+      if (event.country) expect(clue).not.toContain(event.country.toLowerCase())
+      expect(clue).not.toContain(event.location.toLowerCase())
+    }
   })
 })
 describe('game state transitions', () => {

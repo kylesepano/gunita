@@ -7,6 +7,7 @@ This guide creates a normal Supabase Authentication account first, then grants t
 1. In Supabase, run these migrations in order:
    - `supabase/migrations/202609150001_initial_schema.sql`
    - `supabase/migrations/202609150002_admin_and_catalog.sql`
+   - `supabase/migrations/202609160001_expand_game_modes_and_person_dates.sql`
 2. Add your Supabase project details to `.env.local`:
 
 ```env

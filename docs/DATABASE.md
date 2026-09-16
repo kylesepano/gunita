@@ -1,11 +1,11 @@
 # Database and Supabase setup
 
 1. Create a Supabase project.
-2. Execute both files in `supabase/migrations/` in filename order in its SQL editor. Existing installations only need the new `202609150002_admin_and_catalog.sql` migration.
-3. Execute `supabase/seed.sql`. It is repeatable and contains all ten events, ten people, relations, causes, sequences, clues and source URLs.
+2. Execute all files in `supabase/migrations/` in filename order in its SQL editor. Existing installations should apply any migration they have not yet run, including `202609160001_expand_game_modes_and_person_dates.sql`.
+3. Execute `supabase/seed.sql`. It is repeatable and contains the 124-event starter bank, people, relations, causes, sequences, clues and source URLs.
 4. Enable the Email provider in Authentication. Configure your site URL and allow `/auth` as a redirect on localhost and your deployed domain. Keep email confirmation enabled for production.
 5. Copy `.env.example` to `.env.local`. Add the project URL and public anon/publishable key. Restart Vite. Never use a service-role key in a `VITE_` variable.
-6. Sign up, confirm your email, sign in, finish an expedition, and choose **Save to my account** on the results page.
+6. For admin registration and role setup, follow [ADMIN-PROFILE-SETUP.md](ADMIN-PROFILE-SETUP.md). Guest results remain in the browser; account saving is currently hidden from the public navigation.
 
 With Supabase CLI, link the project and run `supabase db push`; then apply the seed using the SQL editor. The SQL files assume Supabase's `auth` and `storage` schemas.
 
@@ -27,7 +27,7 @@ With Supabase CLI, link the project and run `supabase db push`; then apply the s
 - Profiles and game sessions are restricted by `auth.uid()`.
 - Round operations check ownership of the parent session.
 - The `save_game_result` RPC uses **security invoker**, preserving RLS. A ten-round save is atomic and repeatable. The same session ID cannot be reused by another account.
-- The `save_game_result_with_mode` wrapper also validates/persists roulette, where-only or when-only mode.
+- The `save_game_result_with_mode` wrapper also validates/persists roulette and all six focused modes (who, where, when, what, why and how).
 - Scores and accuracy have database bounds. They remain client-reported, unsuitable for competitive rankings.
 - `historical-portraits` is a public-read storage bucket with image MIME and size restrictions. No client upload policy is granted. Only trusted administrative tooling should curate assets.
 

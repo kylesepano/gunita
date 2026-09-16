@@ -3,7 +3,7 @@ create extension if not exists pgcrypto;
 
 create table public.historical_events (
  id uuid primary key default gen_random_uuid(), slug text not null unique, title text not null,
- summary text not null, description text not null, year integer not null, month integer check(month between 1 and 12), day integer check(day between 1 and 31),
+ summary text not null, description text not null, year integer not null, month integer check(month between 1 and 12), day integer check(day between 1 and 31), cause_distractors jsonb,
  location_name text not null, latitude double precision not null check(latitude between -90 and 90), longitude double precision not null check(longitude between -180 and 180),
  country text not null, region text, category text not null default 'history', difficulty text not null default 'medium' check(difficulty in ('easy','medium','hard')),
  history_scope text not null check(history_scope in ('philippines','world')), source_summary text, editorial_note text, where_prompt text,

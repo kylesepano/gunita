@@ -14,6 +14,7 @@ import { Roulette } from '../features/roulette/Roulette'
 import { CategoryIcon } from '../components/CategoryIcon'
 import { ChallengeArea } from '../features/game/ChallengeArea'
 import { evaluate } from '../game/evaluate'
+import { clueForQuestion } from '../game/questionText'
 export default function GamePage() {
   const s = useGame()
   const navigate = useNavigate()
@@ -85,7 +86,7 @@ export default function GamePage() {
             <BookOpen size={15} /> A MOMENT IN HISTORY
           </div>
           <h2>Follow the clues.</h2>
-          <p className="clue-text">{event.clue}</p>
+          <p className="clue-text">{s.category ? clueForQuestion(event, s.category) : event.clue}</p>
           <span className="collection-tag">
             {event.scope === 'philippines' ? 'Philippine collection' : 'World collection'}
           </span>

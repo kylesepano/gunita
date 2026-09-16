@@ -14,9 +14,11 @@ revoke all on function public.is_admin() from public;
 grant execute on function public.is_admin() to anon,authenticated;
 
 alter table public.historical_events add column is_deleted boolean not null default false;
-alter table public.historical_events add column cause_distractors jsonb;
+alter table public.historical_events add column if not exists cause_distractors jsonb;
 alter table public.historical_people add column image_position text default '50% 25%';
-alter table public.game_sessions add column game_mode text not null default 'roulette' check(game_mode in ('roulette','where','when'));
+alter table public.historical_people add column if not exists birth_year integer;
+alter table public.historical_people add column if not exists death_year integer;
+alter table public.game_sessions add column game_mode text not null default 'roulette' check(game_mode in ('roulette','who','where','when','what','why','how'));
 create index events_live_idx on public.historical_events(is_deleted,is_published,slug);
 drop policy published_events on public.historical_events;
 create policy published_events on public.historical_events for select to anon,authenticated using(is_published and not is_deleted);
@@ -75,9 +77,9 @@ begin
    values(v_slug,btrim(p_event->>'title'),btrim(p_event->>'clue'),btrim(p_event->>'description'),(p_event->>'year')::integer,btrim(p_event->>'location'),(p_event->'coordinates'->>0)::double precision,(p_event->'coordinates'->>1)::double precision,btrim(p_event->>'country'),p_event->>'scope',p_event->>'source',nullif(btrim(p_event->>'note'),''),nullif(btrim(p_event->>'wherePrompt'),''),p_event->'distractors',p_published) returning id into v_id;
  end if;
  -- Isolate this event's editable person so another event's answer is never silently changed.
- insert into public.historical_people(slug,name,short_bio,image_url,image_position)
- values('question-'||v_slug||'-primary',btrim(p_event->'person'->>'name'),btrim(p_event->'person'->>'bio'),p_event->'person'->>'image',coalesce(p_event->'person'->>'imagePosition','50% 25%'))
- on conflict(slug) do update set name=excluded.name,short_bio=excluded.short_bio,image_url=excluded.image_url,image_position=excluded.image_position returning id into v_person;
+ insert into public.historical_people(slug,name,short_bio,image_url,image_position,birth_year)
+ values('question-'||v_slug||'-primary',btrim(p_event->'person'->>'name'),btrim(p_event->'person'->>'bio'),p_event->'person'->>'image',coalesce(p_event->'person'->>'imagePosition','50% 25%'),nullif(p_event->'person'->>'birthYear','')::integer)
+ on conflict(slug) do update set name=excluded.name,short_bio=excluded.short_bio,image_url=excluded.image_url,image_position=excluded.image_position,birth_year=excluded.birth_year returning id into v_person;
  delete from public.event_people where event_id=v_id;
  insert into public.event_people(event_id,person_id,role,is_primary) values(v_id,v_person,btrim(p_event->>'role'),true);
  delete from public.event_causes where event_id=v_id;
@@ -107,7 +109,7 @@ grant execute on function public.admin_remove_event(text,timestamptz) to authent
 create function public.save_game_result_with_mode(p_session_id uuid,p_scope text,p_difficulty text,p_rounds jsonb,p_mode text)
 returns void language plpgsql security invoker set search_path='' as $$
 begin
- if p_mode not in ('roulette','where','when') or p_mode is null then raise exception 'Invalid game mode'; end if;
+ if p_mode not in ('roulette','who','where','when','what','why','how') or p_mode is null then raise exception 'Invalid game mode'; end if;
  if p_mode<>'roulette' and exists(select 1 from jsonb_array_elements(p_rounds) r where r->>'question_type' is distinct from p_mode) then raise exception 'Round types do not match the selected mode'; end if;
  perform public.save_game_result(p_session_id,p_scope,p_difficulty,p_rounds);
  update public.game_sessions set game_mode=p_mode where id=p_session_id and user_id=(select auth.uid());

@@ -10,6 +10,7 @@ This installation has no Supabase credentials configured yet. Guest games work i
 2. Run these SQL files in the Supabase SQL editor, in order:
    - `supabase/migrations/202609150001_initial_schema.sql` (skip if already applied)
    - `supabase/migrations/202609150002_admin_and_catalog.sql`
+   - `supabase/migrations/202609160001_expand_game_modes_and_person_dates.sql`
    - `supabase/seed.sql` (for initial content only)
 3. Create your account through `/auth` and confirm its email, or create a user in the Supabase Authentication dashboard.
 4. In the trusted Supabase SQL editor, replace the example email below with your account's exact email and run:

@@ -40,6 +40,12 @@ it('enforces admin-only CRUD, draft visibility, atomic edits and stale edit prot
       ),
     )
     await db.exec(await readFile('supabase/migrations/202609150002_admin_and_catalog.sql', 'utf8'))
+    await db.exec(
+      await readFile(
+        'supabase/migrations/202609160001_expand_game_modes_and_person_dates.sql',
+        'utf8',
+      ),
+    )
     await db.exec(await readFile('supabase/seed.sql', 'utf8'))
     await db.exec(
       `insert into auth.users values('00000000-0000-0000-0000-000000000001'),('00000000-0000-0000-0000-000000000002'); insert into public.admin_users(user_id) values('00000000-0000-0000-0000-000000000001'); set role authenticated; select set_config('request.jwt.claim.sub','00000000-0000-0000-0000-000000000002',false);`,
@@ -69,9 +75,9 @@ it('enforces admin-only CRUD, draft visibility, atomic edits and stale edit prot
         )
       ).rows[0].stamp
     const firstStamp = await stamp()
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(11)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(125)
     await db.exec('reset role; set role anon;')
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(10)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(124)
     expect(
       (
         await db.query(
@@ -106,14 +112,14 @@ it('enforces admin-only CRUD, draft visibility, atomic edits and stale edit prot
       ).rows,
     ).toHaveLength(3)
     await db.exec('reset role; set role anon;')
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(11)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(125)
     await db.exec('reset role; set role authenticated;')
     await expect(
       db.query('select admin_remove_event($1,$2)', [question.id, firstStamp]),
     ).rejects.toThrow('changed or was already removed')
     await db.query('select admin_remove_event($1,$2)', [question.id, secondStamp])
     await db.exec('reset role; set role anon;')
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(10)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(124)
     expect(
       (
         await db.query(

@@ -8,12 +8,17 @@ export function generateChallenge(
   catalog: HistoricalEvent[] = events,
 ) {
   const others = shuffle(catalog.filter((e) => e.id !== event.id))
+  const anchorBirthYear = event.person.birthYear ?? event.year - 35
+  const eraOthers = others.filter((e) => {
+    const birthYear = e.person.birthYear
+    return birthYear != null && Math.abs(birthYear - anchorBirthYear) <= 100
+  })
   const range = { easy: 100, medium: 200, hard: 500 }[difficulty]
   const minYear = Math.floor((event.year - range * (0.25 + randomIndex(5) / 10)) / 10) * 10
   return {
     people: shuffle([
       event.person,
-      ...others
+      ...eraOthers
         .filter(
           (e, i, all) =>
             e.person.name !== event.person.name &&

@@ -71,7 +71,7 @@ export function WhereChallenge({
           center={scope === 'philippines' ? [12.5, 122] : [25, 15]}
           zoom={scope === 'philippines' ? 5 : 2}
           minZoom={2}
-          scrollWheelZoom={false}
+          scrollWheelZoom
         >
           <TileLayer
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'

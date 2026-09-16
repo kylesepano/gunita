@@ -8,6 +8,8 @@ export interface Person {
   bio: string
   image: string
   imagePosition?: string
+  birthYear?: number
+  deathYear?: number
 }
 export interface HistoricalEvent {
   id: string

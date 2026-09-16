@@ -2,7 +2,7 @@
 
 ## Explore history your way
 
-Six ways to discover. A complete ten-round historical game built in the existing React template at `C:\laragon\www\gunita`, with English-only branding and larger, readable text.
+Seven ways to discover. A complete ten-round historical game built in the existing React template at `C:\laragon\www\gunita`, with English-only branding and larger, readable text.
 
 ### Run locally
 
@@ -19,10 +19,10 @@ Open the Vite URL, normally http://localhost:5173. This is a Vite application in
 
 - Atlas-inspired responsive landing page and circular six-category roulette.
 - Philippine, world and mixed history; easy, medium and hard; ten rounds.
-- **Where only** and **When only** game modes that skip the roulette entirely.
+- **Who, Where, When, What, Why and How only** game modes that skip the roulette entirely.
 - Six working mechanics: portraits, map pins, timeline slider, event evidence cards, multiple causes and sequence ordering.
 - Bounded scoring, hints, streaks, answer explanations, source references and final statistics.
-- Full guest play, persisted progress, safe reloads and a searchable archive of ten events.
+- Full guest play, persisted progress, safe reloads and a searchable archive of 124 starter events.
 - Optional Supabase email/password sign-up, sign-in, logout and private result saving.
 - Secure **`/admin`** sign-in and question viewing, creation, editing, publishing and removal. Published content feeds new games and the archive.
 - Normalized PostgreSQL schema, RLS policies, Storage preparation and a repeatable relational seed.
