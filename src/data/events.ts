@@ -1,5 +1,6 @@
 import type { HistoricalEvent } from '../types/history'
 import { expandedEvents } from './expandedEvents'
+import { wikidataSupplement } from './wikidataSupplement'
 const personAges: Record<string, number> = {
   lapulapu: 1491,
   aguinaldo: 1869,
@@ -282,4 +283,4 @@ const coreEvents: HistoricalEvent[] = [
     note: 'Detailed siege chronology and causal interpretation require editorial review.',
   },
 ]
-export const events: HistoricalEvent[] = [...coreEvents, ...expandedEvents]
+export const events: HistoricalEvent[] = [...coreEvents, ...expandedEvents, ...wikidataSupplement]

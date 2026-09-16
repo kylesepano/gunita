@@ -94,7 +94,7 @@ describe('sequence and bounded scores', () => {
 })
 describe('content and generated challenges', () => {
   it('contains a large unique bank and ten-round scope-correct decks', () => {
-    expect(new Set(events.map((e) => e.id)).size).toBeGreaterThanOrEqual(100)
+    expect(new Set(events.map((e) => e.id)).size).toBeGreaterThanOrEqual(500)
     for (const scope of ['mixed', 'philippines', 'world'] as const) {
       const deck = createDeck(scope)
       expect(deck).toHaveLength(10)
@@ -110,17 +110,12 @@ describe('content and generated challenges', () => {
     for (const event of events)
       for (const difficulty of ['easy', 'medium', 'hard'] as const) {
         const q = generateChallenge(event, difficulty)
-        expect(q.people.length).toBeGreaterThanOrEqual(1)
-        if (event.person.birthYear != null)
-          expect(
-            q.people.every(
-              (candidate) =>
-                candidate.birthYear != null &&
-                Math.abs(candidate.birthYear - event.person.birthYear!) <= 100,
-            ),
-          ).toBe(true)
+        expect(q.people).toHaveLength(8)
+        expect(new Set(q.people.map((candidate) => candidate.name)).size).toBe(8)
+        expect(q.people.map((candidate) => candidate.id)).toContain(event.person.id)
         expect(q.minYear).toBeLessThanOrEqual(event.year)
         expect(q.maxYear).toBeGreaterThanOrEqual(event.year)
+        expect(q.maxYear).toBeLessThanOrEqual(new Date().getFullYear())
         expect(q.years).toContain(event.year)
         expect(evaluate('who', event.person.id, event, q)).toBe(1)
         expect(evaluate('what', event.id, event, q)).toBe(1)
@@ -130,6 +125,26 @@ describe('content and generated challenges', () => {
         expect(evaluate('how', event.sequence, event, q)).toBe(1)
         expect(q.causes.some((cause) => !cause.correct)).toBe(true)
       }
+  }, 15_000)
+  it('fills sparse historical cohorts with randomized people', () => {
+    const event = events.find((candidate) => candidate.id === 'fall-western-rome')!
+    const challenge = generateChallenge(event, 'medium')
+    expect(challenge.people).toHaveLength(8)
+    expect(
+      challenge.people.some(
+        (candidate) =>
+          candidate.birthYear != null &&
+          Math.abs(candidate.birthYear - event.person.birthYear!) > 100,
+      ),
+    ).toBe(true)
+  })
+  it('prioritizes same-country events for What choices', () => {
+    const event = events.find((candidate) => candidate.id === 'penicillin')!
+    const challenge = generateChallenge(event, 'medium')
+    const selectedEvents = challenge.eventOptions.map((option) =>
+      events.find((candidate) => candidate.id === option.id)!,
+    )
+    expect(selectedEvents.every((candidate) => candidate.country === event.country)).toBe(true)
   })
   it('uses non-geographic clues for every map challenge', () => {
     for (const event of events) {

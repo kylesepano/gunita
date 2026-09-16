@@ -153,9 +153,9 @@ test('admin signs in, views, creates, edits, publishes and removes a question', 
   await expect(
     page.getByText('Question saved. Published changes appear in new games.'),
   ).toBeVisible()
-  await expect(page.locator('.admin-question-row')).toHaveCount(125)
+  await expect(page.locator('.admin-question-row')).toHaveCount(events.length + 1)
   await page.goto('/archive')
-  await expect(page.locator('.archive-card')).toHaveCount(124)
+  await expect(page.locator('.archive-card')).toHaveCount(events.length)
   await page.goto('/admin')
   await page.getByRole('button', { name: 'Edit Apollo 11 review copy', exact: true }).click()
   await page.getByLabel('Event title', { exact: true }).fill('Apollo 11 reviewed')

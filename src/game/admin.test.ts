@@ -75,9 +75,9 @@ it('enforces admin-only CRUD, draft visibility, atomic edits and stale edit prot
         )
       ).rows[0].stamp
     const firstStamp = await stamp()
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(125)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(events.length + 1)
     await db.exec('reset role; set role anon;')
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(124)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(events.length)
     expect(
       (
         await db.query(
@@ -112,14 +112,14 @@ it('enforces admin-only CRUD, draft visibility, atomic edits and stale edit prot
       ).rows,
     ).toHaveLength(3)
     await db.exec('reset role; set role anon;')
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(125)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(events.length + 1)
     await db.exec('reset role; set role authenticated;')
     await expect(
       db.query('select admin_remove_event($1,$2)', [question.id, firstStamp]),
     ).rejects.toThrow('changed or was already removed')
     await db.query('select admin_remove_event($1,$2)', [question.id, secondStamp])
     await db.exec('reset role; set role anon;')
-    expect((await db.query('select * from historical_events')).rows).toHaveLength(124)
+    expect((await db.query('select * from historical_events')).rows).toHaveLength(events.length)
     expect(
       (
         await db.query(

@@ -28,7 +28,7 @@ for (const { type } of categories) {
     await page.reload()
     await expect(page.getByRole('button', { name: 'Lock in answer' })).toBeVisible()
     if (type === 'who') {
-      await expect(page.locator('.portrait-card img')).toHaveCount(4)
+      await expect(page.locator('.portrait-card img')).toHaveCount(8)
       expect(
         await page
           .locator('.portrait-card img')
@@ -71,6 +71,21 @@ for (const { type } of categories) {
     ).toEqual([])
     await page.getByRole('button', { name: 'Lock in answer' }).click()
     await expect(page.locator('.answer-reveal')).toBeVisible()
+    if (type === 'who') {
+      await expect(page.locator('.portrait-card.correct-answer')).toHaveCount(1)
+      await expect(page.locator('.portrait-card.correct-answer')).toContainText('Lapulapu')
+      await expect(page.locator('.portrait-card.correct-answer')).toContainText('Correct answer')
+    }
+    if (type === 'why') {
+      await expect(page.locator('.cause-grid > button.correct-answer')).toHaveCount(
+        event.causes.length,
+      )
+      await expect(page.locator('.cause-grid > button.incorrect-answer')).toHaveCount(
+        challenge.causes.filter((cause) => !cause.correct).length,
+      )
+      await expect(page.locator('.cause-grid')).toContainText('Correct cause')
+      await expect(page.locator('.cause-grid')).toContainText('Incorrect cause')
+    }
     const result = await page.evaluate(
       () => JSON.parse(localStorage.getItem('gunita-game-v1')!).state.results[0],
     )

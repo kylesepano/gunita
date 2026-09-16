@@ -1,15 +1,22 @@
 import ts from 'typescript'
-import { readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 const source = await readFile('src/data/events.ts', 'utf8')
 const expandedSource = await readFile('src/data/expandedEvents.ts', 'utf8')
+const supplementSource = await readFile('src/data/wikidataSupplement.ts', 'utf8')
 const portraitsSource = await readFile('src/data/bankPortraits.ts', 'utf8')
 const portraitsJs = ts.transpileModule(portraitsSource, {
   compilerOptions: { module: ts.ModuleKind.ESNext },
 }).outputText
 const { bankPortraits } = await import(
-  `data:text/javascript;base64,${Buffer.from(portraitsJs).toString('base64')}`,
+  `data:text/javascript;base64,${Buffer.from(portraitsJs).toString('base64')}`
 )
 globalThis.__gunitaBankPortraits = bankPortraits
+const supplementJs = ts.transpileModule(supplementSource, {
+  compilerOptions: { module: ts.ModuleKind.ESNext },
+}).outputText
+const { wikidataSupplement } = await import(
+  `data:text/javascript;base64,${Buffer.from(supplementJs).toString('base64')}`
+)
 const expandedJs = ts.transpileModule(
   expandedSource.replace(
     "import { bankPortraits } from './bankPortraits'",
@@ -29,14 +36,19 @@ const js = ts.transpileModule(
       'const expandedEvents = globalThis.__gunitaExpandedEvents',
     )
     .replace(
-      /export const events: HistoricalEvent\[\] = \[\.\.\.coreEvents, \.\.\.expandedEvents\]/,
-      'export const events = [...coreEvents, ...expandedEvents]',
+      "import { wikidataSupplement } from './wikidataSupplement'",
+      'const wikidataSupplement = globalThis.__gunitaWikidataSupplement',
+    )
+    .replace(
+      /export const events: HistoricalEvent\[\] = \[\.\.\.coreEvents, \.\.\.expandedEvents, \.\.\.wikidataSupplement\]/,
+      'export const events = [...coreEvents, ...expandedEvents, ...wikidataSupplement]',
     ),
   {
     compilerOptions: { module: ts.ModuleKind.ESNext },
   },
 ).outputText
 globalThis.__gunitaExpandedEvents = expandedEvents
+globalThis.__gunitaWikidataSupplement = wikidataSupplement
 const { events } = await import(`data:text/javascript;base64,${Buffer.from(js).toString('base64')}`)
 const quote = (x) => (x == null ? 'null' : `'${String(x).replaceAll("'", "''")}'`)
 const lines = [
@@ -89,4 +101,42 @@ for (const e of events) {
 }
 lines.push('commit;')
 await writeFile('supabase/seed.sql', lines.join('\n'))
-console.log(`Generated complete relational seed for ${events.length} events.`)
+
+const maxEditorBytes = 300_000
+const body = lines.slice(2, -1)
+const chunks = []
+let chunk = []
+let chunkBytes = 0
+for (const statement of body) {
+  const startsEvent = statement.startsWith('insert into public.historical_events')
+  const statementBytes = Buffer.byteLength(statement) + 1
+  if (startsEvent && chunk.length && chunkBytes + statementBytes > maxEditorBytes) {
+    chunks.push(chunk)
+    chunk = []
+    chunkBytes = 0
+  }
+  chunk.push(statement)
+  chunkBytes += statementBytes
+}
+if (chunk.length) chunks.push(chunk)
+
+await rm('supabase/seed-parts', { recursive: true, force: true })
+await mkdir('supabase/seed-parts', { recursive: true })
+for (const [index, statements] of chunks.entries()) {
+  const part = String(index + 1).padStart(2, '0')
+  await writeFile(
+    `supabase/seed-parts/${part}.sql`,
+    [
+      `-- Gunita seed, part ${index + 1} of ${chunks.length}. Run these files in numerical order.`,
+      'begin;',
+      ...statements,
+      'commit;',
+      '',
+    ].join('\n'),
+  )
+}
+await writeFile(
+  'supabase/seed-parts/README.md',
+  `# Supabase SQL Editor seed files\n\nThe SQL Editor cannot run the complete seed at once. Open and run 01.sql, then 02.sql, and continue in numerical order through ${String(chunks.length).padStart(2, '0')}.sql. Each file is an independent transaction and can safely be re-run.\n`,
+)
+console.log(`Generated ${events.length} events in ${chunks.length} SQL Editor seed parts.`)

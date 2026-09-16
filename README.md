@@ -20,7 +20,7 @@ Open the Vite URL, normally http://localhost:5173. This is a Vite application in
 - Atlas-inspired responsive landing page and circular six-category roulette.
 - Philippine, world and mixed history; easy, medium and hard; ten rounds.
 - **Who, Where, When, What, Why and How only** game modes that skip the roulette entirely.
-- Six working mechanics: portraits, map pins, timeline slider, event evidence cards, multiple causes and sequence ordering.
+- Six working mechanics: eight-option portraits, map pins, timeline slider, event evidence cards, multiple causes and sequence ordering.
 - Bounded scoring, hints, streaks, answer explanations, source references and final statistics.
 - Full guest play, persisted progress, safe reloads and a searchable archive of 124 starter events.
 - Optional Supabase email/password sign-up, sign-in, logout and private result saving.

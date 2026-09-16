@@ -35,6 +35,12 @@ export default function GamePage() {
   }
   const answerReady =
     s.category === 'how' || (s.answer !== null && (!Array.isArray(s.answer) || s.answer.length > 0))
+  const nextChapter = () => {
+    const isFinalRound = s.round === 9
+    s.next()
+    if (isFinalRound) navigate('/results')
+    else window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
   return (
     <div className="page-container game-page">
       <div className="game-topbar">
@@ -174,6 +180,10 @@ export default function GamePage() {
                       </div>
                       <h3>+{result.breakdown.total.toLocaleString()} points</h3>
                     </div>
+                    <button className="button primary reveal-next" onClick={nextChapter}>
+                      {s.round === 9 ? 'See your discoveries' : 'Next chapter'}
+                      <ArrowRight size={17} />
+                    </button>
                   </div>
                   <h3>{event.title}</h3>
                   <p>
@@ -217,16 +227,6 @@ export default function GamePage() {
                       </span>
                     ))}
                   </div>
-                  <button
-                    className="button primary"
-                    onClick={() => {
-                      s.next()
-                      if (s.round === 9) navigate('/results')
-                    }}
-                  >
-                    {s.round === 9 ? 'See your discoveries' : 'Next chapter'}
-                    <ArrowRight size={17} />
-                  </button>
                 </div>
               )}
             </>

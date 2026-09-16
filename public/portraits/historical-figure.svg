@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 480" role="img" aria-label="Historical figure placeholder">
+  <rect width="360" height="480" fill="#e7e1d2"/>
+  <circle cx="180" cy="157" r="72" fill="#79816f"/>
+  <path d="M62 430c10-113 62-172 118-172s108 59 118 172" fill="#59614f"/>
+  <path d="M140 154c8 13 20 20 40 20s32-7 40-20" fill="none" stroke="#e7e1d2" stroke-width="7" stroke-linecap="round"/>
+</svg>

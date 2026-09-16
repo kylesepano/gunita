@@ -1769,6 +1769,66 @@ const seeds: Seed[] = [
 
 const imageUrl = (id: string) => bankPortraits[id] ?? '/portraits/bank-' + id + '.svg'
 
+const continents: Record<string, string> = {
+  Austria: 'Europe',
+  Belgium: 'Europe',
+  France: 'Europe',
+  Germany: 'Europe',
+  Greece: 'Europe',
+  Italy: 'Europe',
+  Poland: 'Europe',
+  Russia: 'Europe',
+  Spain: 'Europe',
+  Switzerland: 'Europe',
+  Ukraine: 'Europe',
+  'United Kingdom': 'Europe',
+  Bangladesh: 'Asia',
+  China: 'Asia',
+  India: 'Asia',
+  Iran: 'Asia',
+  Iraq: 'Asia',
+  Israel: 'Asia',
+  Japan: 'Asia',
+  Kazakhstan: 'Asia',
+  Korea: 'Asia',
+  Nepal: 'Asia',
+  Pakistan: 'Asia',
+  Philippines: 'Asia',
+  'Saudi Arabia': 'Asia',
+  'TÃ¼rkiye': 'Asia',
+  Vietnam: 'Asia',
+  Egypt: 'Africa',
+  Rwanda: 'Africa',
+  'South Africa': 'Africa',
+  Bahamas: 'North America',
+  Cuba: 'North America',
+  Haiti: 'North America',
+  Panama: 'North America',
+  'United States': 'North America',
+  'New Zealand': 'Oceania',
+}
+
+function contextualDistractors(seed: Seed) {
+  const byCloseness = (left: Seed, right: Seed) =>
+    Math.abs(left.year - seed.year) - Math.abs(right.year - seed.year)
+  const nearby = seeds.filter((candidate) => candidate.id !== seed.id).sort(byCloseness)
+  const sameCountry = nearby.filter((candidate) => candidate.country === seed.country)
+  const sameContinent = nearby.filter(
+    (candidate) =>
+      candidate.country !== seed.country &&
+      continents[candidate.country] === continents[seed.country],
+  )
+  const elsewhere = nearby.filter(
+    (candidate) =>
+      candidate.country !== seed.country &&
+      continents[candidate.country] !== continents[seed.country],
+  )
+
+  return [...sameCountry, ...sameContinent, ...elsewhere]
+    .slice(0, 2)
+    .map((candidate) => `Conditions surrounding ${candidate.title}`)
+}
+
 export const expandedEvents: HistoricalEvent[] = seeds.map((x) => ({
   id: x.id,
   title: x.title,
@@ -1803,10 +1863,7 @@ export const expandedEvents: HistoricalEvent[] = seeds.map((x) => ({
     'Conditions and decisions surrounding ' + x.title,
     'Wider changes affecting ' + x.country + ' during this period',
   ],
-  distractors: [
-    'A later development unrelated to ' + x.title,
-    'A distant event with no connection to ' + x.country,
-  ],
+  distractors: contextualDistractors(x),
   sequence: [
     'Earlier conditions shaped the context for ' + x.title,
     'Leaders and communities acted around ' + x.location,

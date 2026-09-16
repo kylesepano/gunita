@@ -25,6 +25,6 @@ The interface is English and the brand is simply Gunita; historical people and p
 
 Images are downloaded to `public/portraits`. `credits.json` and `credits.html` preserve original Commons file pages, author/credit metadata and licenses. Most are public domain; the Lapulapu image is CC BY-SA 4.0 and the Schabowski image is CC BY-SA 3.0 DE. Retain these licenses and attribution if moving to Storage. CSS crops affect presentation only. Do not replace images with unreviewed random URLs.
 
-The expanded starter bank also includes `bank-credits.json`: 98 person-page thumbnails are stored locally with their Wikipedia source pages, while 16 entries use neutral initials illustrations until a reviewed, licensed portrait is available. The Who mechanic uses birth-year cohorts (within 100 years) so these images are plausible distractors rather than occupation-coded clues.
+The expanded starter bank also includes `bank-credits.json`: 98 person-page thumbnails are stored locally with their Wikipedia source pages, while 16 entries use neutral initials illustrations until a reviewed, licensed portrait is available. The Who mechanic prioritizes birth-year cohorts (within 100 years); if that cohort is too small, random distinct people complete the standard eight portrait choices.
 
 Before adding a new event: check the source, name uncertainty, choose the map target, identify a primary person and their role, author causes and incorrect options, validate the chronological stages, provide imagery with attribution, and regenerate the SQL seed using `npm run seed:generate`.

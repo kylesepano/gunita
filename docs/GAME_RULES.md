@@ -6,7 +6,7 @@ Each expedition has ten rounds. In Roulette mode, six categories are drawn indep
 | -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Who      | Select a historical portrait. Easy shows names, medium shows context, hard focuses on the image. Descriptive image alternatives remain available for accessibility. |
 | Where    | Pin a map location or type coordinates. Reveal shows both markers, a connecting line and Haversine distance.                                                        |
-| When     | Move a year slider. Easy adds candidate years; medium/hard use wider ranges. Arrow keys provide precise selection.                                                  |
+| When     | Move a year slider. Easy adds candidate years; medium/hard use wider ranges capped at the current year. Arrow keys provide precise selection.                       |
 | What     | Combine year, person and location evidence to identify an event card.                                                                                               |
 | Why      | Select all contributing causes. Incorrect selections reduce accuracy; selecting every card cannot earn full marks.                                                  |
 | How      | Reorder four stages with dragging or move-up/down buttons. Partial ordering earns partial credit.                                                                   |

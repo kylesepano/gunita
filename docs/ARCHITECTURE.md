@@ -20,7 +20,9 @@ React 19, strict TypeScript, Vite, Tailwind CSS 4, React Router, Zustand, React 
 
 `clue → spinning → answering → revealed → clue`, ending at `completed` after round ten. A spin preselects its result before animation. Repeated spins and duplicate submission calls are ignored. Leaving the page retains progress. Beginning another game explicitly replaces the current local expedition.
 
-Focused Who, Where, When, What, Why and How games use `answering → revealed → answering`, with no roulette state. Every new round remounts the challenge area, clearing map view, temporary coordinate inputs and other per-round UI state. Who distractors are selected from people whose recorded birth years are no more than 100 years from the answer’s birth year.
+Focused Who, Where, When, What, Why and How games use `answering → revealed → answering`, with no roulette state. Every new round remounts the challenge area, clearing map view, temporary coordinate inputs and other per-round UI state. Who rounds show eight portraits; people within 100 birth years are selected first, and random distinct people fill any remaining places.
+
+What options prioritize events from the same country, then the same continent, before using events from elsewhere.
 
 All score calculations use pure functions. The sequence mechanic accepts drag-and-drop and button reordering. Map input accepts clicks and coordinate entry. Every category has a distinct interaction surface.
 

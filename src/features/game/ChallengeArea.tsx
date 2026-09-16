@@ -18,6 +18,7 @@ export function ChallengeArea({ event }: { event: HistoricalEvent }) {
           people={s.challenge.people}
           difficulty={s.difficulty}
           value={s.answer as string | null}
+          correctId={event.person.id}
           onChange={change}
           disabled={disabled}
         />
